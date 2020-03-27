@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "462398213",
+    "hash" : "3522102180",
     "id" : "EFC24C6A",
-    "lastKnownWriteTime" : 1585315030,
-    "last_content_update" : 1585315030122,
+    "lastKnownWriteTime" : 1585315475,
+    "last_content_update" : 1585315475111,
     "path" : "~/Documents/OSAR/covid19-acessoagua/codes/mapas.R",
     "project_path" : "codes/mapas.R",
     "properties" : {
-        "cursorPosition" : "118,22",
-        "scrollLine" : "116"
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
     },
     "relative_order" : 1,
     "source_on_save" : false,

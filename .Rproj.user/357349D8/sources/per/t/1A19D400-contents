@@ -1,10 +1,9 @@
-#=================================
+#===================================
 # OSAR
-# FUNCOES PARA VISUALIZACAO
+# observatoriosar.wordpress.com
 #
-# claudioalvesmonteiro
-#================================
-
+# github.com/claudioalvesmonteiro
+#===================================
 
 # Tema para Graficos
 tema_massa <- function (base_size = 11, base_family = "") {

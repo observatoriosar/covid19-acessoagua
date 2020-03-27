@@ -60,14 +60,14 @@ renda$renda_log = log(renda$`Valor do rendimento nominal médio mensal das pesso
 # visualizacao
 #==================
 
+# funcao para criar visualizacao em mapa e barras
 mapAndBar = function(shape, data, variable, namevariable, legendname, savename){
   
-  # MAPA
+  #--- MAPA
   mapa.funcao(shape, data, variable, '', legendname, savename)
   ggsave(paste0('resultados/',savename,"_MAPA.png"), width = 6, height = 6, units = "in")
   
-  # BARRA
-  
+  # ---BARRA
   # ordenar
   namevariable = factor(namevariable, levels = unique(namevariable[order(variable)]) )
   
@@ -128,13 +128,13 @@ data = merge(pop[,c('code', 'NM_MUNICIP', 'pop_65oumais', 'taxa_65oumais')], sni
 data = merge(data, renda[,c(3:5)], by='NM_MUNICIP')
 colnames(data)[6] = 'renda_media'
 
-# function for range
+# funcao para normalizacao
 range01 <- function(x){(x-min(x))/(max(x)-min(x))}
 
-# range
+# aplicar normalizacao nas variaveis numericas
 data[,c(3:7)] = data.frame(sapply(data[,c(3:7)], function(x) range01(x)))
 
-# correlate
+# executar e visualizar matrix de correlacao
 mydatacor = cor(data[,c(3:7)])
 library(corrplot)
 corrplot(mydatacor)
